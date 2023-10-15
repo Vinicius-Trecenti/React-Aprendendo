@@ -1,10 +1,19 @@
-function Item(props){
+function Item({marca, ano_lancamento}){
     return(
         <>
-        <li>{props.marca}</li>
+        <li>{marca} - {ano_lancamento}</li>
         <p>Legenda do item</p>
         </>
     )
 }
 
-export default Item
+// Item.PropTypes = {
+//      marca: PropTypes.string.isRequired,
+// }
+
+Item.defaultProps = {
+     marca: "faltou",
+     ano_lancamento: 0,
+
+}
+export default Item 
